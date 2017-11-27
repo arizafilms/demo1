@@ -250,47 +250,13 @@ a{
         display: block;
         font-variant: small-caps;
     }
-    .nav{
-        width: 80px;
-    }
-    .menu-icon{
-        display: block;
-        float: left;
-    }
-    .links-container{
-        display: block;
-        clear: both;
-        background-color: rgba(0, 0, 0, 0.82);
-        height: 100vh;
-    }
-    .link{
-        margin: 20px;
-        float: left;
-        clear: both;
-        line-height: 1.5;
-        border: 0 solid;
-        font-size: 1.5em;
-        width: 30px;
-        height: 30px;
-    }
+
+
+  
     .link:hover{
         border-bottom: 1px solid;
     }
-    .me{
-        top: 70vh;
-    }
-    .left-title-page{
-        float: left;
-        width: 100%;
-        height: 100vh;
 
-    }
-
-    .right-content{
-        float: left;
-        width: 100%;
-        height: 100vh;
-    }
 }
 @media screen and (max-width: 500px) and (min-width: 0px) { /*small screen*/
     .page{
@@ -304,22 +270,8 @@ a{
         font-size: 5em;
         line-height: 1.7;
     }
-    .menu-icon{
-        display: block;
-        margin: 0 auto;
 
-    }
-    .links-container{
-        display: none;
-    }
-    .link{
-        line-height: 5;
-        border: 0;
-        border-bottom: 1px solid;
-        font-size: 1.5em;
-        width: 100vw;
-        height: 15vh;
-    }
+
     .me{
         top: 65vh;
         left: calc(50% - 100px);
@@ -329,17 +281,5 @@ a{
         background-color: #2a2c3a;
         width: 100%;
     }
-    .left-title-page{
-        float: left;
-        width: 100%;
-        height: 100vh;
-        font-size: .5em;
 
-    }
-
-    .right-content{
-        float: left;
-        width: 100%;
-        height: 100vh;
-    }
 }
