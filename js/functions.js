@@ -58,7 +58,7 @@ $links.click(function() {
     var href = $.attr(this, 'href');
     $root.animate({
         scrollTop: $(href).offset().top
-    },200, function () {
+    },500, function () {
         window.location.hash = href;
     });
     $('#audio-player-project').click(function () {
