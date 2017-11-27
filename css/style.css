@@ -93,7 +93,7 @@ a{
     z-index: 99;
     text-align: center;
     position: fixed;
-}
+}/*
 .menu-icon{
     text-align: center;
     display: none;
@@ -104,7 +104,7 @@ a{
     background-color: rgb(9, 16, 24);
     margin: 0;
 
-}
+}*/
 .icon{
     border: 0;
     border-top: 1px solid;
