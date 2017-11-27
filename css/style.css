@@ -97,19 +97,9 @@ a{
 .menu-icon{
     text-align: center;
     display: none;
-    cursor: pointer;
-    color: rgba(239, 239, 239, 0.92);
-    opacity: 1;
-    width:50px;
-    background-color: rgb(9, 16, 24);
-    margin: 0;
-
 }
 .icon{
     display: none;
-    border: 0;
-    border-top: 1px solid;
-    height: 0px;
 }*/
 .links-container{
     background-color: rgba(17, 26, 36, 0.9);
