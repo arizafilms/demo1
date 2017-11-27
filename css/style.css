@@ -96,7 +96,7 @@ a{
 }
 .menu-icon{
     text-align: center;
-    display: inline-block;
+    display: none;
     cursor: pointer;
     color: rgba(239, 239, 239, 0.92);
     opacity: 1;
