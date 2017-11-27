@@ -104,13 +104,13 @@ a{
     background-color: rgb(9, 16, 24);
     margin: 0;
 
-}*/
+}
 .icon{
     display: none;
     border: 0;
     border-top: 1px solid;
     height: 0px;
-}
+}*/
 .links-container{
     background-color: rgba(17, 26, 36, 0.9);
     display: block;
