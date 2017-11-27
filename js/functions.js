@@ -47,13 +47,13 @@ $menuBtn.click(function(){
 $links.click(function() {
     var $wWidth = $(window).width();
 
-    if($wWidth >500 && $wWidth <820){
+    /* if($wWidth >500 && $wWidth <820){
         $('.links-container').animate({
             'width': 'toggle'
         });
     }else {
         $('.links-container').slideToggle(300);
-    }
+    }*/
 
     var href = $.attr(this, 'href');
     $root.animate({
