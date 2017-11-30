@@ -61,7 +61,7 @@ a{
 
 #player{
     overflow: hidden;
-    background-image: url("../images/bg1.jpg");
+    background-image: url("../images/Header.png");
     background-size: cover;
     background-position: left center;
     background-attachment: scroll;
@@ -226,6 +226,10 @@ a{
 
 }
 #page3{
+    background-image: url("../images/About me.png");
+    background-size: cover;
+    background-position: left center;
+    background-attachment: scroll;
 }
 
 @media screen and (max-width: 820px) and (min-width: 500px){ /* medium sized screen*/
