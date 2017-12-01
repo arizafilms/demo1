@@ -154,7 +154,7 @@ h1 {
     text-align: center;
     background-color: rgba(255, 255, 255, 1);
     width: 100%;
-    overflow-x: scroll;
+    overflow: scroll;
 }
 
 .page-name {
