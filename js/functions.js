@@ -11,7 +11,7 @@ $(window).scroll(function() {
     var $wScroll = $(window).scrollTop();
 });
 
-$menuBtn.click(function() {
+/*$menuBtn.click(function() {
     var $wWidth = $(window).width();
     if ($wWidth > 500 && $wWidth < 820) {
         $('.links-container').animate({
@@ -21,7 +21,7 @@ $menuBtn.click(function() {
         $('.links-container').slideToggle(300);
     }
 
-});
+});*/
 $links.click(function() {
     var $wWidth = $(window).width();
 
