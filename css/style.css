@@ -5,14 +5,9 @@
     box-sizing: border-box;
 }
 
-code {
-    font-family: "Courier New", Courier, monospace;
-}
-
 html {
     overflow-x: hidden;
-    font-family: 'Poiret One', sans-serif;
-    font-weight: 100;
+    font-family: 'Antic Didone', serif;
 }
 
 body {
@@ -33,6 +28,7 @@ a {
 }
 
 h1 {
+    font-weight: 100;
     position: absolute;
     top: -80px;
     font-size: 2em;
@@ -61,7 +57,6 @@ h1 {
     display: block;
     font-family: 'Poiret One', sans-serif;
     font-size: 12em;
-    font-weight: 100;
     top: calc(50% - 150px);
     text-align: center;
     color: rgba(255, 255, 253, 1);
@@ -182,7 +177,7 @@ h1 {
     position: absolute;
     margin: 20vh auto 5px 10%;
     width: 80%;
-    max-width: 600px;
+    max-width: 750px;
     background-color: #000000c0;
     line-height: 1.5;
     display: block;
@@ -191,7 +186,7 @@ h1 {
 
 .about-me>p {
     padding: 5% 10% 10% 10%;
-    font-size: .5em;
+    font-size: .6em;
 }
 
 #project-title-page {
