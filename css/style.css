@@ -7,7 +7,6 @@
 
 html {
     overflow-x: hidden;
-    font-family: 'Antic Didone', serif;
 }
 
 body {
@@ -16,6 +15,8 @@ body {
 
 * {
     text-decoration: none;
+    font-family: 'Antic Didone', serif;
+
 }
 
 img {
