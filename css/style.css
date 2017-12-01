@@ -222,4 +222,9 @@ h1 {
         font-size: 5em;
         line-height: 1.7;
     }
+    .about-me>p {
+        padding: 5% 10% 10% 10%;
+        line-height: 1.8;
+        font-size: .40em;
+    }
 }
