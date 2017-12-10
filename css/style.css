@@ -47,6 +47,7 @@ img {
 }
 
 .logo {
+    transform: translateZ(0.5px); 
     Perspective: 2px;
     background-image: url('../images/w_logo.png');
     background-repeat: no-repeat;
