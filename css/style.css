@@ -43,7 +43,8 @@ img {
 #zero {
     background-image: url("../images/bg1.jpg");
     background-size: cover;
-    background-position: fixed;
+    background-attatchment: fixed;
+    background-position: left;
     perspective: 2px;
 }
 
