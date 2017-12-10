@@ -44,7 +44,7 @@ img {
     background-image: url("../images/bg1.jpg");
     background-size: cover;
     background-position: fixed;
-    perspective: 1px;
+    perspective: 2px;
 }
 
 .logo {
