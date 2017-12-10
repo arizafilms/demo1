@@ -43,12 +43,12 @@ img {
 #zero {
     background-image: url("../images/bg1.jpg");
     background-size: cover;
-    background-position: left fixed;
+    background-position: fixed;
     perspective: 1px;
 }
 
 .logo {
-    transform: translateZ(-1.5px) scale(1.5);
+    transform: translateZ(-1.5px) scale(2);
     background-image: url('../images/w_logo.png');
     background-repeat: no-repeat;
     background-position: center;
