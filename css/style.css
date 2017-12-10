@@ -47,6 +47,7 @@ img {
 }
 
 .logo {
+    Perspective: 1px;
     background-image: url('../images/w_logo.png');
     background-repeat: no-repeat;
     background-position: center;
