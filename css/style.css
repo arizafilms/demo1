@@ -20,7 +20,7 @@ h1 {
 img {
     object-fit: cover;
     height: 60vh;
-    width: 50%;
+    width: 49%;
     border-radius: 25px;
     border: 5px solid rgba(255, 255, 255, 0);
 }
