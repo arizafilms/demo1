@@ -8,7 +8,7 @@ var $wScroll = $(window).scrollTop();
 
 setTimeout(function() {
 
-    $root.on('wheel', function(e) {
+    $root.on('wheel touchmove', function(e) {
         var $wHeight = $(window).height();
 
 
