@@ -5,7 +5,7 @@ var $links = $('.link');
 var $menuBtn = $('.menu-icon');
 var $wScroll = $(window).scrollTop();
 
-
+/*
 setTimeout(function() {
 
     $root.on('wheel touchmove', function(e) {
@@ -46,7 +46,7 @@ setTimeout(function() {
     });
 }, 100);
 
-
+*/
 $links.click(function() {
     var href = $.attr(this, 'href');
     $root.animate({
