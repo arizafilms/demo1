@@ -4,7 +4,11 @@ var $wWidth = $(window).width();
 var $links = $('.link');
 var $menuBtn = $('.menu-icon');
 var $wScroll = $(window).scrollTop();
-
+var $playerTop = $('#video').offset().top;
+var $playerBottom = $('#me').offset().top;
+var $navBar = $('.nav');
+console.log($playerTop);
+console.log($wScroll);
 
 
 
@@ -51,7 +55,22 @@ $root.on('wheel', function(e) {
 
 });
 */
+function fadeMenu() {
+    var $wScroll = $(window).scrollTop();
 
+    if ($wScroll >= $playerTop && $wScroll < $playerBottom - 25) {
+        console.log('fade menu');
+        $navBar.css({
+            'opacity': '.5'
+        });
+    } else {
+        $navBar.css({
+            'opacity': '1'
+        });
+    }
+}
+
+$(window).on('scroll', fadeMenu);
 $links.click(function() {
     var href = $.attr(this, 'href');
     $root.animate({
