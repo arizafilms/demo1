@@ -88,12 +88,14 @@ function snap($wScroll, e) {
             $root.animate({
                 scrollTop: $pages[1].offsetTop * 2
             }, 200);
+            tv.mute();
             console.log('photo2');
             break;
         case $wScroll < (($pages[1].offsetTop * 3.45)):
             $root.animate({
                 scrollTop: $pages[1].offsetTop * 3
             }, 200);
+            tv.mute();
             console.log('photo3');
             break;
         case $wScroll < (($pages[1].offsetTop * 4.45)):
@@ -103,6 +105,7 @@ function snap($wScroll, e) {
             break;
         case $wScroll < (($pages[1].offsetTop * 5.35)):
             $('.link:eq(3)').trigger('click');
+            tv.mute();
             console.log('me');
             break;
     }
