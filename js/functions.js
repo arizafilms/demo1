@@ -78,10 +78,12 @@ function snap($wScroll, e) {
     switch (true) {
         case $wScroll < ($pages[1].offsetTop * 0.35):
             $('.link:eq(0)').trigger('click');
+            tv.mute();
             console.log('home');
             break;
         case $wScroll < (($pages[1].offsetTop * 1.45)):
             $('.link:eq(1)').trigger('click');
+            tv.mute();
             console.log('photo');
             break;
         case $wScroll < (($pages[1].offsetTop * 2.45)):
