@@ -10,13 +10,6 @@ a {
     color: #dfdfdf;
 }
 
-h1 {
-    font-weight: 10;
-    position: absolute;
-    top: -80px;
-    font-size: 2em;
-}
-
 iframe {
     overflow-y: hidden;
     object-fit: contain;
@@ -24,10 +17,10 @@ iframe {
 }
 
 .container {
+    font-family: 'Quicksand', sans-serif;
     overflow-x: hidden;
     z-index: 1;
     position: relative;
-    font-family: 'Antic Didone', serif;
     height: 100%;
     background-color: rgb(0, 0, 0);
 }
@@ -61,7 +54,6 @@ iframe {
     background-position: center;
     background-size: contain;
     display: block;
-    font-family: 'Poiret One', sans-serif;
     font-size: 12em;
     top: calc(50% - 150px);
     text-align: center;
@@ -157,7 +149,6 @@ iframe {
     background-size: cover;
     background-position: right;
     background-repeat: no-repeat;
-    background-color: #010305;
     color: #ffffff;
 }
 
@@ -171,9 +162,20 @@ iframe {
     font-size: 2.7em;
 }
 
+.about-me h1 {
+    position: absolute;
+    top: -90px;
+    font-size: 2.3em;
+    font-weight: 100;
+    background-color: #000d1f00;
+    height: 12vh;
+    min-height: 150px;
+}
+
 .about-me>p {
     padding: 5% 10% 10% 10%;
     font-size: .6em;
+    background-color: #00070fd7;
 }
 
 #player {
