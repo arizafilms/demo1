@@ -103,6 +103,7 @@ function snap($wScroll, e) {
         case $wScroll < (($pages[1].offsetTop * 4.45)):
             $('.link:eq(2)').trigger('click');
             tv.unMute();
+            tv.playVideo();
             console.log('video');
             break;
         case $wScroll < (($pages[1].offsetTop * 5.35)):
