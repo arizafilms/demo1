@@ -75,7 +75,7 @@ iframe {
 
 .links-container {
     text-align: right;
-    background-color: rgb(6, 19, 32);
+    background-color: rgba(0, 0, 0, 0.9);
     display: block;
     width: 100%;
     height: 40px;
@@ -102,18 +102,18 @@ iframe {
 
 .link:hover {
     animation-name: hover;
-    animation-fill-mode: forwards;
+    animation-fill-mode: both;
     animation-duration: 300ms;
 }
 
 @keyframes hover {
     0% {
-        opacity: .2;
+        opacity: 1;
         color: rgb(255, 255, 255);
     }
     100% {
         opacity: 1;
-        color: rgb(0, 176, 255);
+        color: rgb(0, 183, 255);
     }
 }
 
@@ -153,6 +153,7 @@ iframe {
 }
 
 .about-me {
+    background-color: #000000ec;
     position: absolute;
     margin: 20vh auto 5px 10%;
     width: 80%;
@@ -167,7 +168,7 @@ iframe {
     top: -90px;
     font-size: 2.3em;
     font-weight: 100;
-    background-color: #000d1f00;
+    background-color: #00000000;
     height: 12vh;
     min-height: 150px;
 }
@@ -175,7 +176,7 @@ iframe {
 .about-me>p {
     padding: 5% 10% 10% 10%;
     font-size: .6em;
-    background-color: #00070fd7;
+    background-color: #00000086;
 }
 
 #player {
@@ -223,8 +224,8 @@ iframe {
         height: 40px;
         font-size: 1.5em;
         margin: 10px 10px 0 0;
-        color: rgba(255, 255, 255, 1);
-        background-color: rgb(0, 136, 255);
+        color: rgba(255, 255, 255, 0.733);
+        background-color: rgba(0, 0, 0, 0.856);
         transform: matrix(1, 0, 0, 1, 0, 0);
     }
 }
