@@ -78,36 +78,30 @@ function snap($wScroll, e) {
     switch (true) {
         case $wScroll < ($pages[1].offsetTop * 0.35):
             $('.link:eq(0)').trigger('click');
-            tv.mute();
             console.log('home');
             break;
         case $wScroll < (($pages[1].offsetTop * 1.45)):
             $('.link:eq(1)').trigger('click');
-            tv.mute();
             console.log('photo');
             break;
         case $wScroll < (($pages[1].offsetTop * 2.45)):
             $root.animate({
                 scrollTop: $pages[1].offsetTop * 2
             }, 200);
-            tv.mute();
             console.log('photo2');
             break;
         case $wScroll < (($pages[1].offsetTop * 3.45)):
             $root.animate({
                 scrollTop: $pages[1].offsetTop * 3
             }, 200);
-            tv.mute();
             console.log('photo3');
             break;
         case $wScroll < (($pages[1].offsetTop * 4.45)):
             $('.link:eq(2)').trigger('click');
-            tv.unMute();
             console.log('video');
             break;
         case $wScroll < (($pages[1].offsetTop * 5.35)):
             $('.link:eq(3)').trigger('click');
-            tv.mute();
             console.log('me');
             break;
     }
