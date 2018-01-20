@@ -9,10 +9,9 @@ var $playerBottom = $('#me').offset().top;
 var $navBar = $('.nav');
 var $pages = $('.page');
 var timer = null;
+var $logo = $('.logo');
 
-console.log($playerTop);
-console.log($wScroll);
-$('.link:eq(0)').trigger('click');
+
 
 
 //$(document.body).on('touchmove', scroll); // for mobile
@@ -61,7 +60,6 @@ $root.on('wheel', function(e) {
 function fadeMenu($wScroll) {
 
     if ($wScroll >= ($playerTop - 20) && $wScroll < ($playerBottom - 100)) {
-        console.log('fade menu');
         $navBar.css({
             'opacity': '.5'
         });
@@ -72,37 +70,30 @@ function fadeMenu($wScroll) {
     }
 }
 
-function snap($wScroll, e) {
-    console.log($wScroll);
-    e.preventDefault();
+
+function snap($wScroll) {
     switch (true) {
-        case $wScroll < ($pages[1].offsetTop * 0.35):
+        case $wScroll < ($pages[1].offsetTop * 0.5):
             $('.link:eq(0)').trigger('click');
-            console.log('home');
             break;
-        case $wScroll < (($pages[1].offsetTop * 1.45)):
+        case $wScroll < ($pages[1].offsetTop * 1.45):
             $('.link:eq(1)').trigger('click');
-            console.log('photo');
             break;
         case $wScroll < (($pages[1].offsetTop * 2.45)):
             $root.animate({
                 scrollTop: $pages[1].offsetTop * 2
-            }, 200);
-            console.log('photo2');
+            }, 1000);
             break;
         case $wScroll < (($pages[1].offsetTop * 3.45)):
             $root.animate({
                 scrollTop: $pages[1].offsetTop * 3
-            }, 200);
-            console.log('photo3');
+            }, 1000);
             break;
         case $wScroll < (($pages[1].offsetTop * 4.45)):
             $('.link:eq(2)').trigger('click');
-            console.log('video');
             break;
         case $wScroll < (($pages[1].offsetTop * 5.35)):
             $('.link:eq(3)').trigger('click');
-            console.log('me');
             break;
     }
 
@@ -131,17 +122,32 @@ $(window).on('scroll', function(e) {
     }
     timer = setTimeout(function() {
         snap($wScroll, e);
-    }, 200);
+    }, 1000);
+
+    $logo.css({
+        'transform': 'translate( -' + $wScroll * 0.01 + '%,' + $wScroll * 0.3 + '%)'
+    });
+
+    if ($wScroll > $('#portfolio').offset().top * 0.3) {
+        $('#lightgallery a').each(function(i) {
+            setTimeout(function() {
+                $('#lightgallery img').eq(i).animate({
+                    'opacity': '1'
+                }, 800);
+            }, 250 * (i + 1));
+        });
+    }
 });
 
 
-$links.click(function() {
+$links.on('click', function() {
     href = $.attr(this, 'href');
     $root.animate({
         scrollTop: $(href).offset().top
 
 
-    }, 200, function() {
+    }, 1000, function() {
         window.location.hash = href;
     });
+
 });
