@@ -15,7 +15,7 @@ var $logo = $('.logo');
 
 
 //$(document.body).on('touchmove', scroll); // for mobile
-//$(window).on('wheel', scroll);
+$(window).on('resize', scroll);
 
 /*
 $root.on('wheel', function(e) {
