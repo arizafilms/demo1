@@ -12,66 +12,21 @@ var timer = null;
 var $logo = $('.logo');
 
 
+function fadeMenu() {
 
-
-//$(document.body).on('touchmove', scroll); // for mobile
-$(window).on('resize', scroll);
-
-/*
-$root.on('wheel', function(e) {
-    e.preventDefault();
-    var $wHeight = $(window).height();
-
-
-    var $wScroll = $(window).scrollTop();
-    var scrollDown = $wScroll + $wHeight;
-    var scrollUp = $wScroll - $wHeight;
-
-
-    if (e.originalEvent.wheelDelta < 0) {
-        //scroll down
-        setTimeout(function() {
-
-
-            console.log('down');
-            $root.animate({
-                scrollTop: scrollDown
-            }, 500);
-        }, 100);
-
-
-    } else {
-        //scroll up
-        setTimeout(function() {
-
-            console.log('Up ');
-            $root.animate({
-                scrollTop: scrollUp
-            }, 200);
-        }, 100);
-
-    }
-
-    //prevent page fom scrolling
-    return false;
-
-});
-*/
-function fadeMenu($wScroll) {
-
-    if ($wScroll >= ($playerTop - 20) && $wScroll < ($playerBottom - 100)) {
+    if ($wScroll >= ($playerTop - 100) && $wScroll < ($playerBottom - 300)) {
         $navBar.css({
             'opacity': '.5'
         });
     } else {
         $navBar.css({
-            'opacity': '1'
+            'opacity': '0.9'
         });
     }
 }
 
 
-function snap($wScroll) {
+function snap() {
     switch (true) {
         case $wScroll < ($pages[1].offsetTop * 0.5):
             $('.link:eq(0)').trigger('click');
@@ -97,32 +52,18 @@ function snap($wScroll) {
             break;
     }
 
-    /*if ($wScroll > 0 && $wScroll < $pages[1].offsetTop){
-        
-            console.log('hello');
-            $('.link:eq(0)').trigger('click');
-           console.log($pages[0].offsetTop);
-        }
-    else if ($wScroll > $pages[1].offsetTop && $wScroll < $pages[2]){
-            console.log('hello2');
-            $('.link:eq(1)').trigger('click');
-           
-    }
-    else if ($wScroll > $pages[2].offsetTop && $wScroll < $pages[3]){
-        console.log('hello3');
-            $('.link:eq(2)').trigger('click');
-            
-        }*/
 }
-$(window).on('scroll', function(e) {
-    fadeMenu($wScroll);
+$(window).on('scroll', function() {
+    $playerTop = $('#video').offset().top;
+    $playerBottom = $('#me').offset().top;
     $wScroll = $(window).scrollTop();
+    fadeMenu();
     if (timer !== null) {
         clearTimeout(timer);
     }
     timer = setTimeout(function() {
-        snap($wScroll, e);
-    }, 1000);
+        snap();
+    }, 800);
 
     $logo.css({
         'transform': 'translate( -' + $wScroll * 0.01 + '%,' + $wScroll * 0.3 + '%)'
@@ -133,8 +74,8 @@ $(window).on('scroll', function(e) {
             setTimeout(function() {
                 $('#lightgallery img').eq(i).animate({
                     'opacity': '1'
-                }, 800);
-            }, 250 * (i + 1));
+                }, 500);
+            }, 550 * (i + 1));
         });
     }
 });
