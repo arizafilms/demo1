@@ -66,7 +66,7 @@ $(window).on('scroll', function() {
     }, 800);
 
     $logo.css({
-        'transform': 'translate( -' + $wScroll * 0.01 + '%,' + $wScroll * 0.3 + '%)'
+        'transform': 'translate( -' + 0 + '%,' + $wScroll * 0.3 + '%)'
     });
 
     if ($wScroll > $('#portfolio').offset().top * 0.3) {
