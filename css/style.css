@@ -62,7 +62,7 @@ iframe {
     color: rgba(255, 255, 253, 1);
     filter: blur(0);
     opacity: 1;
-    position: relative;
+    position: fixed;
     width: 100%;
     height: 1.5em;
 }
@@ -123,7 +123,7 @@ iframe {
     background-color: aqua;
     text-align: center;
     background-color: rgba(255, 255, 255, 1);
-    height: 300vh;
+    height: 400vh;
 }
 
 #photo img {
