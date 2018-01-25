@@ -1,99 +1,153 @@
-var $root = $('html, body');
-var $wHeight = $(window).height();
-var $wWidth = $(window).width();
-var $links = $('.link');
-var $menuBtn = $('.menu-icon');
-var $wScroll = $(window).scrollTop();
-var $playerTop = $('#video').offset().top;
-var $playerBottom = $('#me').offset().top;
-var $navBar = $('.nav');
-var $pages = $('.page');
-var timer = null;
-var $logo = $('.logo');
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:300" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="css/lightgallery.css" />
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:300" rel="stylesheet">
 
 
-function fadeMenu() {
+    <title>Ariza Films</title>
+</head>
 
-    if ($wScroll >= ($playerTop - 100) && $wScroll < ($playerBottom - 300)) {
-        $navBar.css({
-            'opacity': '.5'
+<body>
+
+    <div class="container">
+        <div class="nav">
+            <!--<div class="menu-icon">
+                <div class="icon" style="width:15px; margin:10px auto "></div>
+                <div class="icon" style="width:35px; margin:10px auto"></div>
+                <div class="icon" style="width:15px; margin:10px auto"></div>
+            </div>-->
+            <section class="links-container">
+                <div class="lg-screen-links">
+                    <a class="link" href="#home"><i class="">HOME |</i></a>
+                    <a class="link" href="#photo"><i class="">PHOTO |</i></a>
+                    <a class="link" href="#video"><i class="">VIDEO |</i></a>
+                    <a class="link" href="#me"><i class="">CONTACT |</i></a>
+                </div>
+                <div class="sm-screen-links">
+                    <a class="link" href="#home"><i class="material-icons md-36">home</i></a>
+                    <a class="link" href="#photo"><i class="material-icons md-36">photo_library</i></a>
+                    <a class="link" href="#video"><i class="material-icons md-36">person_outline</i></a>
+                    <a class="link" href="#me"><i class="material-icons md-36">vibration</i></a>
+                </div>
+            </section>
+        </div>
+
+        <div class="page" id="home">
+
+        </div>
+        <div class="logo"></div>
+        <div class="page" id="photo">
+            <div id="portfolio">
+
+                <div id="lightgallery">
+                    </a>
+                    <a href="images/cny.jpg">
+                        <img src="images/cny.jpg">
+                    </a>
+                    <a href="images/nel.jpg">
+                        <img src="images/nel.jpg">
+                    </a>
+                    <a href="https://scontent-iad3-1.xx.fbcdn.net/v/t1.0-9/23658871_241872113013221_4240252330192497793_n.jpg?oh=4bf85deee61ae877bd1a101dfae096aa&amp;oe=5A9145C7">
+                        <img src="https://scontent-iad3-1.xx.fbcdn.net/v/t1.0-9/23658871_241872113013221_4240252330192497793_n.jpg?oh=4bf85deee61ae877bd1a101dfae096aa&amp;oe=5A9145C7">
+                    </a>
+                    <a href="https://scontent-iad3-1.xx.fbcdn.net/v/t1.0-9/23622081_241872173013215_7840978061891844795_n.jpg?oh=fe82f38048269bf37cb6013b3ab92f59&amp;oe=5AD0FD61">
+                        <img src="https://scontent-iad3-1.xx.fbcdn.net/v/t1.0-9/23622081_241872173013215_7840978061891844795_n.jpg?oh=fe82f38048269bf37cb6013b3ab92f59&amp;oe=5AD0FD61">
+                    </a>
+                    <a href="images/horse.jpg">
+                        <img src="images/horse.jpg">
+                    </a>
+                    <a href="images/stranger.jpg">
+                        <img src="images/stranger.jpg">
+                    </a>
+                    <a href="images/driver.jpg">
+                        <img src="images/driver.jpg">
+                    </a>
+                    <a href="images/boy.jpg">
+                        <img src="images/boy.jpg">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="page" id="video">
+            <div id="player"></div>
+        </div>
+        <div class="page" id="me">
+            <section class="about-me">
+                <h1>
+                    HELLO
+                </h1>
+                </h2><a href="mailto:arizafilms.info@gmail.com">E-MAIL</a></h2>
+
+                <p class="p-square">
+                    My name is David Ariza. I am a photographer and videographer based out of Brooklyn,NY. Ariza Films is a photo and video creator for couples, parents, and families who want to find a way to make those beautiful memories last forever. I like to capture
+                    real natural moments and tell your story through stunning work of art that you will be able to look back on and have forever
+                </p>
+
+
+            </section>
+        </div>
+    </div>
+    </div>
+
+    <script language="javascript" type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
+    <script language="JavaScript" src="js/functions.js" type="text/javascript"></script>
+    <script src="js/lightgallery.min.js"></script>
+    <script src="js/lg-thumbnail.min.js"></script>
+    <script src="js/lg-fullscreen.min.js"></script>
+    <script type="text/javascript">
+        lightGallery(document.getElementById('lightgallery'), {
+            thumbnail: true
         });
-    } else {
-        $navBar.css({
-            'opacity': '0.9'
-        });
-    }
-}
+    </script>
+    <script type="text/javascript">
+        var tag = document.createElement('script');
+        tag.src = 'https://www.youtube.com/player_api';
+        var firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+        var tv,
+            playerDefaults = {
+                autohide: 1,
+                modestbranding: 1,
+                rel: 0,
+                showinfo: 0,
+                controls: 0,
+                disablekb: 1,
+                enablejsapi: 1,
+                iv_load_policy: 3
+            };
+        var vid = [{
+            'videoId': 'ZuVUjn_XEjE',
+            'startSeconds': 0,
+            'suggestedQuality': 'hd1080'
+
+        }];
 
 
-function snap() {
-    switch (true) {
-        case $wScroll < ($pages[1].offsetTop * 0.5):
-            $('.link:eq(0)').trigger('click');
-            break;
-        case $wScroll < ($pages[1].offsetTop * 1.45):
-            $('.link:eq(1)').trigger('click');
-            break;
-        case $wScroll < (($pages[1].offsetTop * 2.45)):
-            $root.animate({
-                scrollTop: $pages[1].offsetTop * 2
-            }, 1000);
-            break;
-        case $wScroll < (($pages[1].offsetTop * 3.45)):
-            $root.animate({
-                scrollTop: $pages[1].offsetTop * 3
-            }, 1000);
-            break;
-        case $wScroll < (($pages[1].offsetTop * 4.45)):
-            $root.animate({
-                scrollTop: $pages[1].offsetTop * 4
-            }, 1000);
-            break;
-        case $wScroll < (($pages[1].offsetTop * 5.45)):
-            $('.link:eq(2)').trigger('click');
-            break;
-        case $wScroll < (($pages[1].offsetTop * 6.35)):
-            $('.link:eq(3)').trigger('click');
-            break;
-    }
+        function onYouTubePlayerAPIReady() {
+            tv = new YT.Player('player', {
+                events: {
+                    'onReady': onPlayerReady,
+                },
+                playerVars: playerDefaults
+            });
+        }
 
-}
-$(window).on('scroll', function() {
-    $playerTop = $('#video').offset().top;
-    $playerBottom = $('#me').offset().top;
-    $wScroll = $(window).scrollTop();
-    fadeMenu();
-    if (timer !== null) {
-        clearTimeout(timer);
-    }
-    timer = setTimeout(function() {
-        snap();
-    }, 800);
+        function onPlayerReady(e) {
+            tv.loadVideoById(vid[0]);
+            tv.playVideo();
+            tv.setVolume(0);
+        }
+    </script>
 
-    $logo.css({
-        'transform': 'translate( ' + 0 + '%, ' + ($wScroll * 0.2) + '%)'
-    });
+</body>
 
-    if ($wScroll > $('#portfolio').offset().top * 0.35) {
-        $('#lightgallery a').each(function(i) {
-            setTimeout(function() {
-                $('#lightgallery img').eq(i).animate({
-                    'opacity': '1'
-                }, 500);
-            }, 550 * (i + 1));
-        });
-    }
-});
-
-
-$links.on('click', function() {
-    href = $.attr(this, 'href');
-    $root.animate({
-        scrollTop: $(href).offset().top
-
-
-    }, 1000, function() {
-        window.location.hash = href;
-    });
-
-});
+</html>
