@@ -45,9 +45,14 @@ function snap() {
             }, 1000);
             break;
         case $wScroll < (($pages[1].offsetTop * 4.45)):
+            $root.animate({
+                scrollTop: $pages[1].offsetTop * 4
+            }, 1000);
+            break;
+        case $wScroll < (($pages[1].offsetTop * 5.45)):
             $('.link:eq(2)').trigger('click');
             break;
-        case $wScroll < (($pages[1].offsetTop * 5.35)):
+        case $wScroll < (($pages[1].offsetTop * 6.35)):
             $('.link:eq(3)').trigger('click');
             break;
     }
@@ -66,10 +71,10 @@ $(window).on('scroll', function() {
     }, 800);
 
     $logo.css({
-        'transform': 'translate( -' + 0 + '%,' + $wScroll * 0.3 + '%)'
+        'transform': 'translate( ' + 0 + '%, ' + ($wScroll * 0.2) + '%)'
     });
 
-    if ($wScroll > $('#portfolio').offset().top * 0.3) {
+    if ($wScroll > $('#portfolio').offset().top * 0.35) {
         $('#lightgallery a').each(function(i) {
             setTimeout(function() {
                 $('#lightgallery img').eq(i).animate({
