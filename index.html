@@ -117,7 +117,7 @@
         var tv,
             playerDefaults = {
                 autohide: 1,
-                modestbranding: 0,
+                modestbranding: 1,
                 rel: 0,
                 showinfo: 0,
                 controls: 0,
@@ -126,13 +126,11 @@
                 iv_load_policy: 3
             };
         var vid = [{
-                'videoId': 'ZuVUjn_XEjE',
-                'startSeconds': 0,
-                'suggestedQuality': 'hd1080'
+            'videoId': 'ZuVUjn_XEjE',
+            'startSeconds': 0,
+            'suggestedQuality': 'hd1080'
 
-            }],
-            randomVid = Math.floor(Math.random() * vid.length),
-            currVid = randomVid;
+        }];
 
         $('.hi em:last-of-type').html(vid.length);
 
@@ -140,14 +138,14 @@
             tv = new YT.Player('player', {
                 events: {
                     'onReady': onPlayerReady,
-                    /* 'onStateChange': onPlayerStateChange*/
                 },
                 playerVars: playerDefaults
             });
         }
 
         function onPlayerReady() {
-            tv.loadVideoById(vid[currVid]);
+            tv.loadVideoById(vid[0]);
+            tv.playVideo();
             tv.setVolume(0);
         }
     </script>
