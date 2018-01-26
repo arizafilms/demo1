@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <script language="javascript" type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Quicksand:300" rel="stylesheet">
@@ -50,7 +50,7 @@
                 <div id="lightgallery">
                     </a>
                     <a href="images/cny.jpg">
-                        <img src="images/cny.jpg">
+                        <img class="cny" src="images/cny.jpg">
                     </a>
                     <a href="images/nel.jpg">
                         <img src="images/nel.jpg">
@@ -98,17 +98,16 @@
     </div>
     </div>
 
-    <script language="javascript" type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
-    <script language="JavaScript" src="js/functions.js" type="text/javascript"></script>
-    <script src="js/lightgallery.min.js"></script>
-    <script src="js/lg-thumbnail.min.js"></script>
-    <script src="js/lg-fullscreen.min.js"></script>
-    <script type="text/javascript">
+    <script language="javascript" type="text/javascript" src="js/functions.js" "></script>
+    <script language="javascript " type="text/javascript " src="js/lightgallery.min.js "></script>
+    <script language="javascript " type="text/javascript " src="js/lg-thumbnail.min.js "></script>
+    <script language="javascript " type="text/javascript " src="js/lg-fullscreen.min.js "></script>
+    <script language="javascript " type="text/javascript " >
         lightGallery(document.getElementById('lightgallery'), {
             thumbnail: true
         });
     </script>
-    <script type="text/javascript">
+    <script language="javascript " type="text/javascript " >
         var tag = document.createElement('script');
         tag.src = 'https://www.youtube.com/player_api';
         var firstScriptTag = document.getElementsByTagName('script')[0];
