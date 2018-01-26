@@ -54,7 +54,7 @@ iframe {
 }
 
 .logo {
-    z-index: 99;
+    z-index: 100;
     background-image: url('../images/w_logo.png');
     background-repeat: no-repeat;
     background-position: center;
