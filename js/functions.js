@@ -33,7 +33,7 @@ function fadeMenu() {
 function snap() {
     $wScroll = $(window).scrollTop();
 
-    switch (true) {
+    switch (didScroll) {
         case $wScroll < ($pages[1].offsetTop * 0.5):
             $('.link:eq(0)').trigger('click');
             break;
@@ -61,12 +61,12 @@ function snap() {
         case $wScroll < (($pages[1].offsetTop * 6.35)):
             $('.link:eq(3)').trigger('click');
             break;
-            var didScroll = true;
+            var didScroll = false;
     }
 
 }
 $(window).on('scroll', function() {
-    var didScroll = false;
+   
     $playerTop = $('#video').offset().top;
     $playerBottom = $('#me').offset().top;
     $wScroll = $(window).scrollTop();
