@@ -37,9 +37,9 @@ function snap() {
     switch (didScroll) {
         case $wScroll < ($pages[1].offsetTop * 0.5):
             $root.animate({
-                scrollTop : $pages[1].offsetTop * 0
+                scrollTop: $pages[1].offsetTop * 2
             }, 800);
-            $root.stop();
+            
             break;
         case $wScroll < ($pages[1].offsetTop * 1.45):
             $root.animate({
@@ -66,11 +66,15 @@ function snap() {
             didScroll = false;
             break;
         case $wScroll < (($pages[1].offsetTop * 5.45)):
-            $('.link:eq(2)').trigger('click');
+            $root.animate({
+                scrollTop: $pages[1].offsetTop * 5
+            }, 800);
             var didScroll = false;
             break;
         case $wScroll < (($pages[1].offsetTop * 6.35)):
-            $('.link:eq(3)').trigger('click');
+            $root.animate({
+                scrollTop: $pages[1].offsetTop * 6
+            }, 800);
             didScroll = false;
             break;
     }
