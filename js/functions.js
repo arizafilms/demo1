@@ -72,7 +72,7 @@ function snap() {
     }
 }
 $(window).on('scroll', function() {
-    $links.stop(true, false);
+    $root.stop(true, false);
    var didScroll = true;
     $playerTop = $('#video').offset().top;
     $playerBottom = $('#me').offset().top;
@@ -103,7 +103,7 @@ $(window).on('scroll', function() {
 
 
 $links.on('click', function() {
-    $links.stop(true, false);
+    $root.stop(true, false);
     href = $.attr(this, 'href');
 
     $root.animate({
