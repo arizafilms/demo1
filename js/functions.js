@@ -37,7 +37,6 @@ function snap() {
     switch (didScroll) {
         case $wScroll < ($pages[1].offsetTop * 0.5):
             $('.link:eq(0)').trigger('click');
-            didScroll = false;
 
             break;
         case $wScroll < ($pages[1].offsetTop * 1.45):
