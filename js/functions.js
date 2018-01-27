@@ -10,6 +10,7 @@ var $navBar = $('.nav');
 var $pages = $('.page');
 var timer = null;
 var $logo = $('.logo');
+var didScroll = false;
 
 
 function fadeMenu() {
@@ -60,10 +61,12 @@ function snap() {
         case $wScroll < (($pages[1].offsetTop * 6.35)):
             $('.link:eq(3)').trigger('click');
             break;
+            var didScroll = true;
     }
 
 }
 $(window).on('scroll', function() {
+    var didScroll = false;
     $playerTop = $('#video').offset().top;
     $playerBottom = $('#me').offset().top;
     $wScroll = $(window).scrollTop();
