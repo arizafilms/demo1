@@ -31,6 +31,7 @@ function fadeMenu() {
 
 
 function snap() {
+    $root.stop(true, false);
     $wScroll = $(window).scrollTop();
  var didScroll = true;
     switch (didScroll) {
@@ -72,7 +73,6 @@ function snap() {
     }
 }
 $(window).on('scroll', function() {
-    $root.stop(true, true);
    var didScroll = true;
     $playerTop = $('#video').offset().top;
     $playerBottom = $('#me').offset().top;
@@ -103,7 +103,7 @@ $(window).on('scroll', function() {
 
 
 $links.on('click', function() {
-    $root.stop(true, true);
+    $root.stop(true, false);
     href = $.attr(this, 'href');
 
     $root.animate({
