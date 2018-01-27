@@ -31,7 +31,7 @@ function fadeMenu() {
 
 
 function snap() {
-    $root.stop(true, false);
+    $root.stop();
     $wScroll = $(window).scrollTop();
  var didScroll = true;
     switch (didScroll) {
@@ -103,7 +103,7 @@ $(window).on('scroll', function() {
 
 
 $links.on('click', function() {
-    $root.stop(true, false);
+    $root.stop();
     href = $.attr(this, 'href');
 
     $root.animate({
