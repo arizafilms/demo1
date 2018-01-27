@@ -73,7 +73,7 @@ function snap() {
     }
 }
 $(window).on('scroll', function() {
-    $root.stop();
+    
    var didScroll = true;
     $playerTop = $('#video').offset().top;
     $playerBottom = $('#me').offset().top;
