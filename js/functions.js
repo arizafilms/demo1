@@ -69,7 +69,7 @@ function snap() {
             $('.link:eq(3)').trigger('click');
             var didScroll = false;
             break;
-            
+          $root.stop();
     }
 }
 $(window).on('scroll', function() {
