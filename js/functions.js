@@ -36,29 +36,33 @@ function snap() {
     didScroll = true;
     switch (didScroll) {
         case $wScroll < ($pages[1].offsetTop * 0.5):
-            $('.link:eq(0)').trigger('click');
+            $root.animate({
+                scrollTop : $pages[1].offsetTop * 0
+            }, 800);
             $root.stop();
             break;
         case $wScroll < ($pages[1].offsetTop * 1.45):
-            $('.link:eq(1)').trigger('click');
+            $root.animate({
+                scrollTop: $pages[1].offsetTop * 1
+            }, 800);
             didScroll = false;
             break;
         case $wScroll < (($pages[1].offsetTop * 2.45)):
             $root.animate({
                 scrollTop: $pages[1].offsetTop * 2
-            }, 1000);
+            }, 800);
             didScroll = false;
             break;
         case $wScroll < (($pages[1].offsetTop * 3.45)):
             $root.animate({
                 scrollTop: $pages[1].offsetTop * 3
-            }, 1000);
+            }, 800);
             didScroll = false;
             break;
         case $wScroll < (($pages[1].offsetTop * 4.45)):
             $root.animate({
                 scrollTop: $pages[1].offsetTop * 4
-            }, 1000);
+            }, 800);
             didScroll = false;
             break;
         case $wScroll < (($pages[1].offsetTop * 5.45)):
@@ -84,7 +88,7 @@ $(window).on('scroll', function() {
     if (timer !== null) {
         clearTimeout(timer);
     }
-    timer = this.setTimeout(snap, 400);
+    timer = this.setTimeout(snap, 900);
 
     $logo.css({
         'transform': 'translate( ' + 0 + '%, ' + ($wScroll * 0.19) + '%)'
