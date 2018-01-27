@@ -61,9 +61,8 @@ function snap() {
         case $wScroll < (($pages[1].offsetTop * 6.35)):
             $('.link:eq(3)').trigger('click');
             break;
-            
+            var didScroll = true;
     }
-didScroll = false;
 }
 $(window).on('scroll', function() {
    var didScroll = true;
