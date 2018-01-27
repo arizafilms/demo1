@@ -66,7 +66,7 @@ function snap() {
 didScroll = false;
 }
 $(window).on('scroll', function() {
-   
+   var didScroll = true;
     $playerTop = $('#video').offset().top;
     $playerBottom = $('#me').offset().top;
     $wScroll = $(window).scrollTop();
