@@ -33,7 +33,7 @@ function fadeMenu() {
 function snap() {
     
     $wScroll = $(window).scrollTop();
- var didScroll = true;
+ 
     switch (didScroll) {
         case $wScroll < ($pages[1].offsetTop * 0.5):
             $('.link:eq(0)').trigger('click');
@@ -69,7 +69,6 @@ function snap() {
             $('.link:eq(3)').trigger('click');
             var didScroll = false;
             break;
-          $root.stop();
     }
 }
 $(window).on('scroll', function() {
