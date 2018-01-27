@@ -32,7 +32,7 @@ function fadeMenu() {
 
 function snap() {
     $wScroll = $(window).scrollTop();
-
+ var didScroll = true;
     switch (didScroll) {
         case $wScroll < ($pages[1].offsetTop * 0.5):
             $('.link:eq(0)').trigger('click');
