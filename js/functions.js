@@ -37,7 +37,7 @@ function snap() {
     switch (didScroll) {
         case $wScroll < ($pages[1].offsetTop * 0.5):
             $root.animate({
-                scrollTop: $pages[1].offsetTop * 2
+                scrollTop: $pages[1].offsetTop * 0
             }, 800);
             
             break;
