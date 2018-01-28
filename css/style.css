@@ -134,7 +134,7 @@ iframe {
     float: left;
     object-fit: cover;
     height: 100vh;
-    width: 33.33vw;
+    width: 50vw;
     border-radius: 0px;
     border: 0.5px solid rgb(0, 0, 0);
 }
