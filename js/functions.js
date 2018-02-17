@@ -94,41 +94,6 @@ function snap() {
             break;
     }
 }
-$(window).on('scroll', function() {
-    $wHeight = $(window).height();
-    didScroll = true;
-    $playerTop = $('#video').offset().top;
-    $playerBottom = $('#me').offset().top;
-    $wScroll = $(window).scrollTop();
-
-    var fadeSpeed = (1 - ($wScroll / $wHeight) * 1.5);
-    console.log(fadeSpeed);
-    fadeMenu(); //fades the menu bar/icons when 
-    //video player is in view
-
-    if (timer !== null) {
-        clearTimeout(timer);
-    }
-    timer = this.setTimeout(snap, 950);
-
-    //pull logo down on scroll from home page
-    $logo.css({
-        'transform': 'translateY(-' + ($wScroll * 0.15) + '%)',
-        'opacity': fadeSpeed
-    });
-
-    if ($wScroll > $('#portfolio').offset().top * 0.05) {
-        $('#lightgallery img').each(function(i) {
-            setTimeout(function() {
-                $('#lightgallery img').eq(i).animate({
-                    'opacity': '1'
-                }, 500);
-            }, 250 * (i + 1));
-        });
-    }
-});
-
-
 $links.on('click', function() {
 
     href = $.attr(this, 'href');
@@ -138,4 +103,64 @@ $links.on('click', function() {
     }, scrollSpeed);
 
     window.location.hash = href;
+});
+
+function slideInRight() {
+    if ($wScroll > $pages[3].offsetTop * 0.95) {
+        $('.about-me p').animate({
+            right: '0'
+        }, 3500);
+    }
+}
+
+function slideUp() {
+    if ($wScroll > $pages[3].offsetTop * 0.95) {
+        $('.about-me h1').animate({
+            opacity: '1'
+        }, 2500);
+    }
+}
+$(window).on('resize', function() {
+    $wHeight = $(window).height();
+
+});
+$(window).on('scroll', function() {
+    didScroll = true;
+    $playerTop = $('#video').offset().top;
+    $playerBottom = $('#me').offset().top;
+    $wScroll = $(window).scrollTop();
+
+    var fadeSpeed = (1 - ($wScroll / $wHeight) * 1.5);
+    //console.log($wScroll);
+
+
+    fadeMenu(); //fades the menu bar/icons when 
+    //video player is in view
+
+    //snap divs to viewport
+    if (timer !== null) {
+        clearTimeout(timer);
+    }
+    timer = this.setTimeout(snap, 950);
+
+    //logo parallax
+    $logo.css({
+        'transform': 'translateY(-' + ($wScroll * 0.15) + '%)',
+        'opacity': fadeSpeed
+    });
+    //gallery fade-in
+    if ($wScroll > $('#portfolio').offset().top * 0.05) {
+        $('#lightgallery img').each(function(i) {
+            setTimeout(function() {
+                $('#lightgallery img').eq(i).animate({
+                    'opacity': '1'
+                }, 500);
+            }, 250 * (i + 1));
+        });
+    } //
+
+    slideInRight();
+    slideUp();
+
+
 });
