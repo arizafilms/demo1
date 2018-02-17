@@ -11,7 +11,6 @@
     <link type="text/css" rel="stylesheet" href="css/lightgallery.css" />
     <link href="https://fonts.googleapis.com/css?family=Quicksand:300" rel="stylesheet">
 
-
     <title>Ariza Films</title>
 </head>
 
@@ -19,23 +18,25 @@
 
     <div class="container">
         <div class="nav">
-            <!--<div class="menu-icon">
-                <div class="icon" style="width:15px; margin:10px auto "></div>
-                <div class="icon" style="width:35px; margin:10px auto"></div>
-                <div class="icon" style="width:15px; margin:10px auto"></div>
-            </div>-->
+
+
             <section class="links-container">
+                <div class="social-media">
+                    <a id='ig' class="icon" href="https://www.instagram.com/davidarizanyc"></a>
+                    <a id='fb' class="icon" href="https://www.facebook.com/ArizaFilms/"></a>
+                    <a id='email' class="icon"></a>
+                </div>
                 <div class="lg-screen-links">
-                    <a class="link" href="#home"><i class="">HOME |</i></a>
-                    <a class="link" href="#photo"><i class="">PHOTO |</i></a>
-                    <a class="link" href="#video"><i class="">VIDEO |</i></a>
-                    <a class="link" href="#me"><i class="">CONTACT |</i></a>
+                    <a class="link" href="#home">HOME |</a>
+                    <a class="link" href="#photo">PHOTO |</a>
+                    <a class="link" href="#video">VIDEO |</a>
+                    <a class="link" href="#me">CONTACT |</a>
                 </div>
                 <div class="sm-screen-links">
                     <a class="link" href="#home"><i class="material-icons md-36">home</i></a>
                     <a class="link" href="#photo"><i class="material-icons md-36">photo_library</i></a>
-                    <a class="link" href="#video"><i class="material-icons md-36">person_outline</i></a>
-                    <a class="link" href="#me"><i class="material-icons md-36">vibration</i></a>
+                    <a class="link" href="#video"><i class="material-icons md-36">tv</i></a>
+                    <a class="link" href="#me"><i class="material-icons md-36">person_outline</i></a>
                 </div>
             </section>
         </div>
@@ -47,7 +48,6 @@
             <div id="portfolio">
 
                 <div id="lightgallery">
-                    </a>
                     <a href="images/cny.jpg">
                         <img id="cny" src="images/cny.jpg">
                     </a>
@@ -80,33 +80,241 @@
             <div id="player"></div>
         </div>
         <div class="page" id="me">
+            <div class="me-blur"></div>
+
             <section class="about-me">
                 <h1>
                     HELLO
                 </h1>
-                </h2><a href="mailto:arizafilms.info@gmail.com">E-MAIL</a></h2>
 
                 <p class="p-square">
                     My name is David Ariza. I am a photographer and videographer based out of Brooklyn,NY. Ariza Films is a photo and video creator for couples, parents, and families who want to find a way to make those beautiful memories last forever. I like to capture
                     real natural moments and tell your story through stunning work of art that you will be able to look back on and have forever
                 </p>
-
-
             </section>
+            <div id="map"></div>
         </div>
     </div>
-    </div>
 
-    <script language="javascript" type="text/javascript" src="js/functions.js" "></script>
+    <script language="javascript" type="text/javascript" src="js/functions.js"></script>
     <script language="javascript " type="text/javascript " src="js/lightgallery.min.js "></script>
     <script language="javascript " type="text/javascript " src="js/lg-thumbnail.min.js "></script>
     <script language="javascript " type="text/javascript " src="js/lg-fullscreen.min.js "></script>
-    <script language="javascript " type="text/javascript " >
+
+    <script>
+        function initMap() {
+            var uluru = {
+                lat: 40.655753,
+                lng: -74.003571
+            };
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 15,
+                center: uluru,
+                styles: [{
+                    "elementType": "geometry",
+                    "stylers": [{
+                        "color": "#1d2c4d"
+                    }]
+                }, {
+                    "elementType": "labels.text.fill",
+                    "stylers": [{
+                        "color": "#8ec3b9"
+                    }]
+                }, {
+                    "elementType": "labels.text.stroke",
+                    "stylers": [{
+                        "color": "#1a3646"
+                    }]
+                }, {
+                    "featureType": "administrative.country",
+                    "elementType": "geometry.stroke",
+                    "stylers": [{
+                        "color": "#4b6878"
+                    }]
+                }, {
+                    "featureType": "administrative.land_parcel",
+                    "elementType": "labels",
+                    "stylers": [{
+                        "visibility": "off"
+                    }]
+                }, {
+                    "featureType": "administrative.land_parcel",
+                    "elementType": "labels.text.fill",
+                    "stylers": [{
+                        "color": "#64779e"
+                    }]
+                }, {
+                    "featureType": "administrative.province",
+                    "elementType": "geometry.stroke",
+                    "stylers": [{
+                        "color": "#4b6878"
+                    }]
+                }, {
+                    "featureType": "landscape.man_made",
+                    "elementType": "geometry.stroke",
+                    "stylers": [{
+                        "color": "#334e87"
+                    }]
+                }, {
+                    "featureType": "landscape.natural",
+                    "elementType": "geometry",
+                    "stylers": [{
+                        "color": "#023e58"
+                    }]
+                }, {
+                    "featureType": "poi",
+                    "elementType": "geometry",
+                    "stylers": [{
+                        "color": "#283d6a"
+                    }]
+                }, {
+                    "featureType": "poi",
+                    "elementType": "labels.text",
+                    "stylers": [{
+                        "visibility": "off"
+                    }]
+                }, {
+                    "featureType": "poi",
+                    "elementType": "labels.text.fill",
+                    "stylers": [{
+                        "color": "#6f9ba5"
+                    }]
+                }, {
+                    "featureType": "poi",
+                    "elementType": "labels.text.stroke",
+                    "stylers": [{
+                        "color": "#1d2c4d"
+                    }]
+                }, {
+                    "featureType": "poi.business",
+                    "stylers": [{
+                        "visibility": "off"
+                    }]
+                }, {
+                    "featureType": "poi.park",
+                    "elementType": "geometry.fill",
+                    "stylers": [{
+                        "color": "#023e58"
+                    }]
+                }, {
+                    "featureType": "poi.park",
+                    "elementType": "labels.text.fill",
+                    "stylers": [{
+                        "color": "#3C7680"
+                    }]
+                }, {
+                    "featureType": "road",
+                    "elementType": "geometry",
+                    "stylers": [{
+                        "color": "#304a7d"
+                    }]
+                }, {
+                    "featureType": "road",
+                    "elementType": "labels.icon",
+                    "stylers": [{
+                        "visibility": "off"
+                    }]
+                }, {
+                    "featureType": "road",
+                    "elementType": "labels.text.fill",
+                    "stylers": [{
+                        "color": "#98a5be"
+                    }]
+                }, {
+                    "featureType": "road",
+                    "elementType": "labels.text.stroke",
+                    "stylers": [{
+                        "color": "#1d2c4d"
+                    }]
+                }, {
+                    "featureType": "road.highway",
+                    "elementType": "geometry",
+                    "stylers": [{
+                        "color": "#2c6675"
+                    }]
+                }, {
+                    "featureType": "road.highway",
+                    "elementType": "geometry.stroke",
+                    "stylers": [{
+                        "color": "#255763"
+                    }]
+                }, {
+                    "featureType": "road.highway",
+                    "elementType": "labels.text.fill",
+                    "stylers": [{
+                        "color": "#b0d5ce"
+                    }]
+                }, {
+                    "featureType": "road.highway",
+                    "elementType": "labels.text.stroke",
+                    "stylers": [{
+                        "color": "#023e58"
+                    }]
+                }, {
+                    "featureType": "road.local",
+                    "elementType": "labels",
+                    "stylers": [{
+                        "visibility": "off"
+                    }]
+                }, {
+                    "featureType": "transit",
+                    "stylers": [{
+                        "visibility": "off"
+                    }]
+                }, {
+                    "featureType": "transit",
+                    "elementType": "labels.text.fill",
+                    "stylers": [{
+                        "color": "#98a5be"
+                    }]
+                }, {
+                    "featureType": "transit",
+                    "elementType": "labels.text.stroke",
+                    "stylers": [{
+                        "color": "#1d2c4d"
+                    }]
+                }, {
+                    "featureType": "transit.line",
+                    "elementType": "geometry.fill",
+                    "stylers": [{
+                        "color": "#283d6a"
+                    }]
+                }, {
+                    "featureType": "transit.station",
+                    "elementType": "geometry",
+                    "stylers": [{
+                        "color": "#3a4762"
+                    }]
+                }, {
+                    "featureType": "water",
+                    "elementType": "geometry",
+                    "stylers": [{
+                        "color": "#0e1626"
+                    }]
+                }, {
+                    "featureType": "water",
+                    "elementType": "labels.text.fill",
+                    "stylers": [{
+                        "color": "#4e6d70"
+                    }]
+                }]
+            });
+            var marker = new google.maps.Marker({
+                position: uluru,
+                map: map
+            });
+        }
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBHDpZKFBf3ObYnYRVondEdQoMzKfm07_Y&callback=initMap" type="text/javascript"></script>
+
+    <script language="javascript " type="text/javascript ">
         lightGallery(document.getElementById('lightgallery'), {
             thumbnail: true
         });
     </script>
-    <script language="javascript " type="text/javascript " >
+
+
+    <script language="javascript " type="text/javascript ">
         var tag = document.createElement('script');
         tag.src = 'https://www.youtube.com/player_api';
         var firstScriptTag = document.getElementsByTagName('script')[0];
