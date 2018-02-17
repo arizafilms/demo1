@@ -2,6 +2,7 @@
     padding: 0;
     border: 0;
     margin: 0;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     text-decoration: none;
 }
@@ -12,6 +13,7 @@ a {
 
 iframe {
     overflow-y: hidden;
+    -o-object-fit: contain;
     object-fit: contain;
     width: 100%;
 }
@@ -34,19 +36,20 @@ iframe {
 }
 
 #home {
-    object-fit: cover;
-    filter: blur(1.8px);
+    -webkit-filter: blur(1.8px);
+    filter: blur(2.9px);
     overflow: hidden;
-    background-color: rgb(22, 22, 22);
+    background-color: rgba(56, 82, 128, 0.35);
+    background-blend-mode: color-burn;
     background-image: url("../images/bg1.jpg");
     background-size: cover;
-    background-attachment: fixed;
-    background-position: left;
-    perspective-origin: 50px 50px;
+    background-position: right;
 }
 
 #home::after {
-    background: linear-gradient(to bottom right, rgba(79, 2, 110, 0.226), rgba(0, 53, 133, 0.151));
+    /* background: -webkit-gradient(linear, left top, right bottom, from(rgba(90, 0, 21, 0.233)), to(rgba(0, 21, 80, 0.342)));
+    background: linear-gradient(to bottom right, rgba(90, 0, 21, 0.233), rgba(0, 21, 80, 0.342));
+    */
     content: '';
     width: 100vw;
     height: 100vh;
@@ -64,6 +67,7 @@ iframe {
     top: calc(50% - 150px);
     text-align: center;
     color: rgba(255, 255, 253, 1);
+    -webkit-filter: blur(0);
     filter: blur(0);
     opacity: 1;
     position: fixed;
@@ -79,12 +83,39 @@ iframe {
     z-index: 98;
 }
 
+.social-media {
+    float: left;
+}
+
+.icon {
+    top: 12px;
+    display: inline-block;
+    position: relative;
+    width: 20px;
+    height: 20px;
+    background-color: rgba(255, 255, 255, 0);
+    margin: auto 20px;
+    border-radius: 10%;
+}
+
+#ig {
+    background-image: url('../images/ig.svg');
+}
+
+#fb {
+    background-image: url('../images/fb.svg');
+}
+
+#email {
+    background-image: url('../images/email.svg');
+}
+
 .links-container {
     text-align: right;
     background-color: rgba(0, 0, 0, 0.9);
     display: block;
     width: 100%;
-    height: 40px;
+    height: 50px;
     line-height: 2;
 }
 
@@ -95,6 +126,7 @@ iframe {
     margin: 0 30px 0 0;
     color: rgba(255, 255, 255, 1);
     background-color: rgba(0, 0, 0, 0);
+    -webkit-transform: matrix(1, 0, 0, 1, 0, 0);
     transform: matrix(1, 0, 0, 1, 0, 0);
 }
 
@@ -107,9 +139,23 @@ iframe {
 }
 
 .link:hover {
+    -webkit-animation-name: hover;
     animation-name: hover;
+    -webkit-animation-fill-mode: both;
     animation-fill-mode: both;
+    -webkit-animation-duration: 300ms;
     animation-duration: 300ms;
+}
+
+@-webkit-keyframes hover {
+    0% {
+        opacity: 1;
+        color: rgb(255, 255, 255);
+    }
+    100% {
+        opacity: 1;
+        color: rgb(0, 183, 255);
+    }
 }
 
 @keyframes hover {
@@ -139,6 +185,7 @@ iframe {
 #lightgallery img {
     opacity: 0;
     float: left;
+    -o-object-fit: cover;
     object-fit: cover;
     height: 100vh;
     width: 50vw;
@@ -161,59 +208,77 @@ iframe {
 }
 
 #me {
-    background-image: url('../images/me.jpg');
-    background-size: cover;
-    background-position: right;
-    background-repeat: no-repeat;
-    color: #ffffff;
+    position: relative;
+    height: 200vh;
+    background-color: #000000;
+    background-blend-mode: overlay;
 }
 
 .about-me {
-    background-color: #000000ec;
-    position: absolute;
-    margin: 20vh auto 5px 10%;
+    color: aliceblue;
+    position: relative;
+    margin: 25vh auto 5px auto;
     width: 80%;
     max-width: 750px;
-    line-height: 1.5;
+    line-height: 1.9;
     display: block;
-    font-size: 2.7em;
+    font-size: 2.0em;
 }
 
 .about-me h1 {
+    opacity: 0;
+    text-align: center;
+    z-index: 99;
     position: absolute;
-    top: -90px;
+    top: -80px;
+    color: rgb(255, 255, 255);
     font-size: 2em;
-    font-weight: lighter;
-    background-color: #00000000;
-    height: 12vh;
-    min-height: 150px;
-}
-
-.about-me h2 {
-    display: inline-block;
+    font-weight: bolder;
+    width: 250px;
+    height: 120px;
 }
 
 .about-me>p {
+    position: relative;
+    right: -100vw;
     padding: 5% 10% 10% 10%;
     font-size: .6em;
-    background-color: #00000086;
+    background-color: #000000d2;
+}
+
+.me-blur {
+    background-image: url('../images/me2.jpg');
+    background-size: cover;
+    background-position: center -300px;
+    background-repeat: no-repeat;
+    background-blend-mode: multiply;
+    position: absolute;
+    background-color: rgba(0, 5, 8, 0.301);
+    width: 100vw;
+    height: 200vh;
+    -webkit-filter: blur(2px);
+    filter: blur(2px);
+    top: 0;
 }
 
 #player {
+    background-color: rgba(71, 0, 0, 0.897);
     width: 100%;
     height: 100vh;
     overflow: hidden;
 }
 
-@media screen and (max-width: 1000px) and (min-width: 0px) {
+#map {
+    position: relative;
+    height: 50vh;
+    width: 85vw;
+    margin: 100px auto 0 auto;
+}
+
+@media screen and (max-width: 1300px) and (min-width: 0px) {
     /*small screen*/
-    .logo {
-        line-height: 1.7;
-    }
     .about-me {
-        background-color: #000000ec;
-        position: absolute;
-        margin: 15vh auto 5px 10%;
+        margin: 25vh auto 5px 10%;
         width: 80%;
         max-width: 750px;
         line-height: 1.0;
@@ -230,17 +295,15 @@ iframe {
     }
     .nav {
         width: 100%;
-        top: auto;
-        bottom: 0px;
         z-index: 95;
-        text-align: center;
         position: fixed;
     }
     .links-container {
         text-align: center;
-        background-color: rgba(2, 7, 12, 0);
+        background-color: rgba(0, 0, 0, 0.925);
         display: block;
         width: 100%;
+        height: 50px;
     }
     .lg-screen-links {
         display: none;
@@ -250,17 +313,15 @@ iframe {
     }
     .link {
         display: inline-block;
-        opacity: .98;
+        opacity: 1;
         border: 0 solid;
-        width: 50px;
-        height: 37px;
-        font-size: 1.5em;
-        margin: 0 15px 0 0;
-        color: rgba(255, 255, 255, 0.863);
-        background-color: rgba(0, 0, 0, 0.856);
+        margin: 0 20px;
+        color: rgb(255, 255, 255);
+        background-color: rgba(0, 0, 0, 0);
     }
     .material-icons.md-36 {
-        font-size: 36px;
+        margin: 12px auto;
+        font-size: 25px;
         font-weight: light;
     }
 }
