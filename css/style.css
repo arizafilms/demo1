@@ -77,7 +77,6 @@ iframe {
 
 .nav {
     width: 100%;
-    bottom: auto;
     top: 0;
     position: fixed;
     z-index: 98;
@@ -115,7 +114,6 @@ iframe {
     background-color: rgba(0, 0, 0, 0.9);
     display: block;
     width: 100%;
-    height: 50px;
     line-height: 2;
 }
 
@@ -299,11 +297,10 @@ iframe {
         position: fixed;
     }
     .links-container {
-        text-align: center;
+        text-align: right;
         background-color: rgba(0, 0, 0, 0.925);
         display: block;
         width: 100%;
-        height: 50px;
     }
     .lg-screen-links {
         display: none;
