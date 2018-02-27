@@ -12,7 +12,6 @@ a {
 }
 
 iframe {
-    top: 0;
     overflow-y: hidden;
     -o-object-fit: contain;
     object-fit: contain;
@@ -40,23 +39,25 @@ iframe {
     -webkit-filter: blur(1.8px);
     filter: blur(2.9px);
     overflow: hidden;
-    background-color: rgba(56, 82, 128, 0.35);
+    background-color: rgba(0, 22, 66, 0.116);
     background-blend-mode: color-burn;
     background-image: url("../images/bg1.jpg");
     background-size: cover;
     background-position: right;
 }
 
+
+/*
 #home::after {
-    /* background: -webkit-gradient(linear, left top, right bottom, from(rgba(90, 0, 21, 0.233)), to(rgba(0, 21, 80, 0.342)));
+    background: -webkit-gradient(linear, left top, right bottom, from(rgba(90, 0, 21, 0.233)), to(rgba(0, 21, 80, 0.342)));
     background: linear-gradient(to bottom right, rgba(90, 0, 21, 0.233), rgba(0, 21, 80, 0.342));
-    */
+    
     content: '';
     width: 100vw;
     height: 100vh;
     top: 0;
     position: absolute;
-}
+}*/
 
 .logo {
     z-index: 100;
@@ -88,7 +89,6 @@ iframe {
 }
 
 .icon {
-    top: 12px;
     display: inline-block;
     position: relative;
     width: 20px;
@@ -111,6 +111,7 @@ iframe {
 }
 
 .links-container {
+    position: relative;
     text-align: right;
     background-color: rgba(0, 0, 0, 0.9);
     display: block;
@@ -118,13 +119,27 @@ iframe {
     line-height: 2;
 }
 
+.logo-mini {
+    top: 0;
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.301);
+    position: relative;
+    background-image: url('../images/w_logo.png');
+    width: 100%;
+    height: 50px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
 .link {
+    position: relative;
+    display: inline-block;
     opacity: 1;
     border: 0 solid;
     font-size: 1.5em;
     margin: 0 30px 0 0;
     color: rgba(255, 255, 255, 1);
-    background-color: rgba(0, 0, 0, 0);
     -webkit-transform: matrix(1, 0, 0, 1, 0, 0);
     transform: matrix(1, 0, 0, 1, 0, 0);
 }
@@ -198,16 +213,18 @@ iframe {
 #me {
     position: relative;
     height: 200vh;
-    background-color: #000000;
+    background-color: rgb(0, 0, 0);
     background-blend-mode: overlay;
 }
 
 .about-me {
     color: aliceblue;
     position: relative;
-    margin: 25vh auto 5px auto;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    margin: 25vh auto;
     width: 80%;
-    max-width: 750px;
+    max-width: 600px;
     line-height: 1.9;
     display: block;
     font-size: 2.0em;
@@ -231,7 +248,7 @@ iframe {
     right: -100vw;
     padding: 5% 10% 10% 10%;
     font-size: .6em;
-    background-color: #000000d2;
+    background-color: rgba(0, 0, 0, 0.815);
 }
 
 .me-blur {
@@ -239,26 +256,26 @@ iframe {
     background-size: cover;
     background-position: center -300px;
     background-repeat: no-repeat;
-    background-blend-mode: multiply;
+    background-blend-mode: color-burn;
     position: absolute;
-    background-color: rgba(0, 5, 8, 0.301);
+    background-color: rgba(160, 192, 214, 0.952);
     width: 100vw;
     height: 200vh;
     -webkit-filter: blur(2px);
     filter: blur(2px);
     top: 0;
 }
+
 #player {
-    margin: auto;
-    -o-object-fit: cover;
-    object-fit: cover;
-    position: relative;
+    -o-object-fit: fill;
+    object-fit: fill;
     top: 0;
-    background-color: rgba(0, 0, 0, 0.897);
+    background-color: rgb(0, 0, 0);
     width: 100%;
     height: 100vh;
     overflow: hidden;
 }
+
 #map {
     position: relative;
     height: 50vh;
@@ -266,14 +283,11 @@ iframe {
     margin: 100px auto 0 auto;
 }
 
-@media screen and (max-width: 1300px) and (min-width: 0px) {
+@media screen and (max-width: 1000px) and (min-width: 0px) {
     /*small screen*/
     .about-me {
-        margin: 25vh auto 5px 10%;
-        width: 80%;
-        max-width: 750px;
+        margin: 25vh auto 5px auto;
         line-height: 1.0;
-        display: block;
         font-size: 2.7em;
     }
     .about-me>p {
@@ -297,6 +311,7 @@ iframe {
         display: inline-block;
     }
     .link {
+        position: relative;
         display: inline-block;
         opacity: 1;
         border: 0 solid;
@@ -305,7 +320,6 @@ iframe {
         background-color: rgba(0, 0, 0, 0);
     }
     .material-icons.md-36 {
-        margin: 12px auto;
         font-size: 25px;
         font-weight: light;
     }

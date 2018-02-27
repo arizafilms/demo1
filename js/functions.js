@@ -65,7 +65,7 @@ function snap() {
                 scrollTop: $pages[1].offsetTop * 3
             }, scrollSpeed);
             didScroll = false;
-            tv.setVolume(0);
+            tv.setVolume(25);
 
             break;
         case $wScroll < (($pages[1].offsetTop * 4.4)):
@@ -81,7 +81,7 @@ function snap() {
                 scrollTop: $pages[1].offsetTop * 5
             }, scrollSpeed);
             tv.playVideo();
-            tv.setVolume(30);
+            tv.setVolume(0);
             var didScroll = false;
             break;
         case $wScroll < (($pages[1].offsetTop * 6.35)):
