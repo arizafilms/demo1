@@ -108,7 +108,7 @@ iframe {
 
 #fb {
     background-image: url('../images/fb.svg');
-    background-color: rgba(59, 89, 152, 0.5);
+    background-color: rgba(59, 89, 152, 0.9);
 }
 
 #fb:hover {
@@ -117,7 +117,7 @@ iframe {
 
 #email {
     background-image: url('../images/email.svg');
-    background-color: rgba(219, 50, 54, 0.5);
+    background-color: rgba(219, 50, 54, 0.9);
 }
 
 #email:hover {
@@ -237,8 +237,8 @@ iframe {
     -ms-flex-line-pack: center;
     align-content: center;
     margin: 25vh auto 250px auto;
-    width: 80%;
-    max-width: 600px;
+    width: 90%;
+    max-width: 800px;
     line-height: 1.9;
     display: block;
     font-size: 2.0em;
@@ -317,16 +317,16 @@ iframe {
 @media screen and (max-width: 1000px) and (min-width: 0px) {
     /*small screen*/
     .about-me {
-        line-height: 1.0;
+        line-height: 1em;
         font-size: 2.7em;
     }
     .about-me>p {
-        margin-top: 180px;
-        line-height: 1.8;
+        margin-top: 160px;
+        line-height: 1.5;
         font-size: 0.4em;
     }
     .about-me h1 {
-        top: -80px;
+        top: -50px;
         font-size: 1.5em;
     }
     .links-container {
