@@ -108,8 +108,19 @@ $links.on('click', function() {
 function slideInRight() {
     if ($wScroll > $pages[3].offsetTop * 0.95) {
         $('.about-me p').animate({
+            opacity: '1',
             right: '0'
-        }, 3500);
+        }, 1500, 'swing');
+    }
+}
+
+function emailMe() {
+    if ($wScroll > $pages[3].offsetTop * 0.95) {
+        $('.icon').animate({
+            opacity: '1',
+            width: '35px',
+            height: '35px',
+        }, 1000);
     }
 }
 
@@ -117,7 +128,7 @@ function slideUp() {
     if ($wScroll > $pages[3].offsetTop * 0.95) {
         $('.about-me h1').animate({
             opacity: '1'
-        }, 2500);
+        }, 1500);
     }
 }
 $(window).on('resize', function() {
@@ -158,9 +169,8 @@ $(window).on('scroll', function() {
             }, 250 * (i + 1));
         });
     } //
-
     slideInRight();
     slideUp();
-
+    emailMe();
 
 });
