@@ -99,7 +99,7 @@ iframe {
 
 #ig {
     background-image: url('../images/ig.svg');
-    background-color: rgba(215, 96, 255, 0.171);
+    background-color: rgba(215, 96, 255, 0.3);
 }
 
 #ig:hover {
@@ -108,7 +108,7 @@ iframe {
 
 #fb {
     background-image: url('../images/fb.svg');
-    background-color: rgba(59, 89, 152);
+    background-color: rgba(59, 89, 152, 0.5);
 }
 
 #fb:hover {
@@ -117,7 +117,7 @@ iframe {
 
 #email {
     background-image: url('../images/email.svg');
-    background-color: rgba(219, 50, 54);
+    background-color: rgba(219, 50, 54, 0.5);
 }
 
 #email:hover {
