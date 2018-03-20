@@ -16,9 +16,6 @@ var scrollSpeed = 650;
 
 
 function fadeMenu() {
-    var $wScroll = $(window).scrollTop();
-    var $playerTop = $('#video').offset().top;
-    var $playerBottom = $('#me').offset().top;
 
     if ($wScroll >= ($playerTop - 100) && $wScroll < ($playerBottom - 300)) {
         $navBar.css({
@@ -34,7 +31,6 @@ function fadeMenu() {
 
 function snap() {
 
-    $wScroll = $(window).scrollTop();
     didScroll = true;
     switch (didScroll) {
         case $wScroll < ($pages[1].offsetTop * 0.2):
@@ -141,7 +137,7 @@ $(window).on('scroll', function() {
     $playerBottom = $('#me').offset().top;
     $wScroll = $(window).scrollTop();
 
-    var fadeSpeed = (1 - ($wScroll / $wHeight) * 1.5);
+    var fadeSpeed = (1 - ($wScroll / $wHeight) * 1.3);
     //console.log($wScroll);
 
 
@@ -156,19 +152,34 @@ $(window).on('scroll', function() {
 
     //logo parallax
     $logo.css({
-        'transform': 'translateY(-' + ($wScroll * 0.15) + '%)',
+        'transform': 'translateY(-' + ($wScroll * 0.08) + '%)',
         'opacity': fadeSpeed
     });
     //gallery fade-in
-    if ($wScroll > $('#portfolio').offset().top * 0.05) {
+    if ($wScroll > $('#portfolio').offset().top * 0.55) {
         $('#lightgallery img').each(function(i) {
             setTimeout(function() {
                 $('#lightgallery img').eq(i).animate({
                     'opacity': '1'
                 }, 500);
             }, 250 * (i + 1));
+            if (i >= 3) {
+                return false;
+            }
         });
-    } //
+
+    }
+    if ($wScroll > $('#portfolio').offset().top * 1.05) {
+        $('#lightgallery img').each(function(i) {
+            setTimeout(function() {
+                $('#lightgallery img').eq(i).animate({
+                    'opacity': '1'
+                }, 500);
+            }, 250 * (i + 1));
+
+        });
+
+    }
     slideInRight();
     slideUp();
     emailMe();
