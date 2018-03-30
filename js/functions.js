@@ -169,7 +169,7 @@ $(window).on('scroll', function() {
         });
 
     }
-    if ($wScroll > $('#portfolio').offset().top * 1.05) {
+    if ($wScroll > $('#portfolio').offset().top * 1.65) {
         $('#lightgallery img').each(function(i) {
             setTimeout(function() {
                 $('#lightgallery img').eq(i).animate({
